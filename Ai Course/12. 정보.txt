@@ -1,0 +1,59 @@
+df = pd.DataFrame(data=[[1,2],[3,4],[5,6],[7,8]],index=['row1','row2','row3','row4'],columns=['col1','col2'])
+print(df)
+
+df1 = pd.Series({'idx1':1,'idx2':2})
+print(df1)
+
+df2 = pd.DataFrame(data=[[1,2],[3,4]],index=['row1','row2'],columns=['col1','col2'])
+print(df2)
+
+
+
+
+
+#index메서드는 pandas객체의 index(행)를 출력
+result = df.index
+print(result)
+
+
+
+
+
+
+
+#columns메서드는 pandas객체의 columns(열)을 출력
+result = df.columns
+print(result)
+
+
+
+
+
+#dtypes 메서드는 열에 포함된 데이터들의 type을 Series형태로 반환
+result = df.dtypes
+print(result)
+
+
+
+#axes메서드는 DataFrame 객체의 축(axes) 레이블 정보를 list형태로 반환
+result = df.axes
+print(result)
+
+
+
+#size메서드는 데이터의 총 수의 갯수
+print(df1.size)
+print(df2.size)
+
+
+#ndim메서드는 데이터의 차원(축의 수)를 반환
+print(df1.ndim)
+print(df2.ndim)
+
+
+
+#shape 메서드는 DataFrame 객체의 차원의 형태를(레이블 정보)를 튜플의 형식으로 반환
+print(df1.shape)
+print(df2.shape)
+>>(3, 3)
+>>(1, 4)

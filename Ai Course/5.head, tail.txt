@@ -1,0 +1,27 @@
+data = np.random.randint(10,size=(10,10))
+df = pd.DataFrame(data=data)
+print(df)
+
+
+
+print(df.head(3))
+
+
+
+#n=음수 n이 0보다 작으면 DataFrame의 끝에서부터 n개열을 제외하고 반환합니다.
+print(df.head(-3))
+
+
+
+
+
+
+"================================================================="
+
+#n=양수 n이 0보다 크면 아래에서부터 n까지 열을 반환한다.
+print(df.tail(3))
+
+
+
+n=음수 n이 0보다 작으면 DataFrame의 위에서부터 n개열을 제외하고 반환합니다.
+print(df.tail(-3))

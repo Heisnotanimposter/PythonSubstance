@@ -1,0 +1,14 @@
+df = pd.DataFrame([[1,2,3], [4,5,6], [7,8,9]], index=['row1', 'row2', 'row3'], columns=['col1', 'col2', 'col3'])
+print(df)
+
+
+result= df.iloc[0]
+print(result)
+
+
+result= df.iloc[[0,2]]
+print(result)
+
+
+result= df.iloc[1:2]
+print(result)

@@ -1,0 +1,21 @@
+col = ['col1','col2','col3']
+data = [['A','x','-'],['A','x','-'],['B','x','앞'],['B','y','-'],['B','y','뒤']]
+df = pd.DataFrame(data=data, columns=col)
+print(df)
+
+
+#중복되는 행을 제거하는 메서드
+print(df.drop_duplicates())
+
+
+
+
+#subset에 특정 컬럼명만 입력할 경우, 해당 열에대해서만
+print(df.drop_duplicates(subset='col2'))
+
+
+
+print(df.drop_duplicates(subset=['col1','col2']))
+
+
+

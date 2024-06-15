@@ -1,0 +1,28 @@
+"""
+squeeze메서드는 차원을 축소(압축). 
+행이나 열이 1개만 있는 데이터를 squeeze하면 Series 객체가 됨
+Series를 squeeze하면 스칼라값이 된다
+"""
+
+df=pd.DataFrame(data=[[1,2],[3,4]],index=['row1','row2'],columns=['col1','col2'])
+print(df)
+
+
+#df.squeeze() 하면 행이나 열이 1개가 아니기 때문에(압축할 수 없기때문에) 원본이 반환된다.
+
+# row1 삭제
+df_row=df.drop(index='row1')
+print(df_row)
+print(df_row.squeeze())
+
+
+
+# col1 삭제
+df_col=df.drop(columns='col1')
+print(df_col)
+print(df_row.squeeze())
+
+
+
+df_col_row = df.drop(index='row1',columns='col1')
+print(df_col_row)

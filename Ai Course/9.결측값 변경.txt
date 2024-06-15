@@ -1,0 +1,40 @@
+col  = ['col1','col2','col3','col4','col5']
+row  = ['row1','row2','row3','row4','row5']
+na = np.nan
+data = [[na, 2,na, 4,na],
+        [ 6, 7,na, 9,na],
+        [11,na,na,14,15],
+        [na,17,na,na,20],
+        [na,22,na,na,25]]
+df = pd.DataFrame(data,row,col)
+print(df)
+
+
+
+#value가 숫자나 문자일 경우 그대로 결측값을 대체
+print(df.fillna('A'))
+
+
+
+
+#dict형태로 입력할 경우 각각 레이블값에 대해 원하는 값으로의 변경
+dict = {'col1':'A','col2':'B','col3':'C','col4':'D','col5':'E'}
+print(df.fillna(value=dict))
+
+
+
+#method인수에 bfill을 입력할 경우 결측값이 바로 아래값과 동일하게 설정
+print(df.fillna(method='bfill'))
+
+
+
+#method인수에 ffill을 입력할 경우 결측값이 바로 위값과 동일
+print(df.fillna(method='ffill'))
+
+
+
+
+#limit인수는 각 레이블값에 대해서 결측치 변경을 수행할 횟수입니다. 행 기준일경우 왼쪽부터, 열 기준일 경우 위에서부터 수행합니다.
+print(df.fillna('A', limit=2))
+
+

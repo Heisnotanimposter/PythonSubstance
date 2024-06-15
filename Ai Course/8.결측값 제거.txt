@@ -1,0 +1,27 @@
+col  = ['col1','col2','col3','col4','col5']
+row  = ['row1','row2','row3','row4']
+data = [[1,2,3,pd.NA,5],[6,pd.NA,8,pd.NA,10],[11,12,13,14,15],[pd.NA,pd.NA,pd.NA,pd.NA,pd.NA]]
+df = pd.DataFrame(data,row,col)
+print(df)
+
+
+
+#axis의 역할 중요
+print(df.dropna(axis=0))
+
+
+
+#any 매개변수는 결측치 레이블을 삭제합니다.
+print(df.dropna(how='any'))
+
+
+#all 매개변수는 모든 레이블 값이 NA 일 경우 제거합니다.
+print(df.dropna(how='all'))
+
+
+
+#thresh 매개변수의 정수값만큼 정상값의 수를 보장한다.
+print(df.dropna(thresh=3))
+
+
+print(df.dropna(thresh=4))
