@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archival Computer Science Papers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">CS Archive</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rankings">Rankings</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Explore Archival Computer Science Papers</h1>
+        <p>Ranked by citations, daily views, and featured in today's news and videos.</p>
+    </section>
+
+    <!-- Rankings Section -->
+    <section id="rankings">
+        <h2>Top Rankings</h2>
+        <div class="ranking-container">
+            <div class="ranking-item">
+                <h3>Most Cited Papers</h3>
+                <ul id="citations-list"></ul>
+            </div>
+            <div class="ranking-item">
+                <h3>Daily Views</h3>
+                <ul id="daily-views-list"></ul>
+            </div>
+            <div class="ranking-item">
+                <h3>Weekly Views</h3>
+                <ul id="weekly-views-list"></ul>
+            </div>
+            <div class="ranking-item">
+                <h3>Monthly Views</h3>
+                <ul id="monthly-views-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <h2>Featured in Today's News</h2>
+        <ul id="news-list"></ul>
+    </section>
+
+    <!-- YouTube Section -->
+    <section id="youtube">
+        <h2>Featured in YouTube Articles</h2>
+        <ul id="youtube-list"></ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CS Archive | Contact us at csarchive@example.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
